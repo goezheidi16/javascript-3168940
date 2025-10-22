@@ -15,7 +15,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
-    border: solid black;
+    border: solid 3px black;
 }
 .diamante1{
     position: absolute;
@@ -93,7 +93,7 @@ body{
 }
 
 .animaCora{
-    animation: salto 1s ease infinite;}
+    animation: salto 1s ease forwards;}
 
 @keyframes salto {
         0%{transform: translateY(0); opacity: 1;}
@@ -103,7 +103,7 @@ body{
 }
 
 .animaGato{
-     animation: animaGato 4s linear infinite alternate
+     animation: animaGato 4s  forwards
     }
     @keyframes animaGato {
         0% {
@@ -112,4 +112,17 @@ body{
         100% {
             transform: translateY(-20%);
         }
+    }
+
+    /* fondo_2 ***************************************************************************** */
+
+    .fondo_2{
+            background-image: url(imagenes/fondo2.jpg);
+            width: 750px;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            border: solid 3px black;
     }
