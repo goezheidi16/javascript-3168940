@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+}
+.contenedor{
+    background: url(./imagenes/fondo\ lindo.jpg);
+    width: 750px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: solid black;
+}
+.diamante1{
+    position: absolute;
+    width: 8%;
+    left: 35%;
+    bottom: 35%;
+}
+
+.diamante2{
+    position: absolute;
+    width: 8%;
+    left: 50%;
+    top: 24%;
+}
+
+.diamante3{
+    position: absolute;
+    width: 8%;
+    right: 27%;
+    bottom: 38%;
+}
+
+#id-corazon1{
+    position: absolute;
+    width: 5%;
+    left: 36.5%;
+    top: 37.5%;
+}
+
+#id-corazon2{
+    position: absolute;
+    width: 5%;
+    right: 43.7%;
+    top: 15%;
+}
+
+.gato1 {
+    position: absolute;
+    width: 8%;
+    left: 22%;
+    top: 21%;
+}
+
+.gato2 {
+    position: absolute;
+    width: 8%;
+    right: 36%;
+    bottom: 24%;
+}
+
+.gato3 {
+    position: absolute;
+    width: 8%;
+    right: 27%;
+    bottom: 51%;
+}
+.cantidad{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 8px;
+    border-radius: 10px;
+    border: solid black;
+    font-family: sans-serif;
+}
+.cantidad img{
+    width: 40%;
+}
+.datos{
+    position: absolute;
+    right: 25%;
+}
+
+.animaCora{
+    animation: salto 1s ease infinite;}
+
+@keyframes salto {
+        0%{transform: translateY(0); opacity: 1;}
+        30%{transform: translateY(-60px);}
+        100%{transform: translateY(0); opacity: 0;;
+        }
+}
+
+.animaGato{
+     animation: animaGato 4s linear infinite alternate
+    }
+    @keyframes animaGato {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-20%);
+        }
+    }
