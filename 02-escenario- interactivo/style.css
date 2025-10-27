@@ -1,13 +1,16 @@
-*{
+* {
     margin: 0;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 96vh;
+    flex-direction: column;
+    gap: 10vh;
 }
-.contenedor{
+
+.fondo1 {
     background: url(./imagenes/fondo\ lindo.jpg);
     width: 750px;
     height: 500px;
@@ -16,63 +19,66 @@ body{
     background-repeat: no-repeat;
     border-radius: 10px;
     border: solid 3px black;
+    margin-top: 12vh;
 }
-.diamante1{
+
+.diamante1 {
     position: absolute;
     width: 8%;
     left: 35%;
     bottom: 35%;
 }
 
-.diamante2{
+.diamante2 {
     position: absolute;
     width: 8%;
     left: 50%;
     top: 24%;
 }
 
-.diamante3{
+.diamante3 {
     position: absolute;
     width: 8%;
     right: 27%;
     bottom: 38%;
 }
 
-#id-corazon1{
+.corazon1 {
     position: absolute;
     width: 5%;
-    left: 36.5%;
+    left: 36.3%;
     top: 37.5%;
 }
 
-#id-corazon2{
+.corazon2 {
     position: absolute;
     width: 5%;
-    right: 43.7%;
-    top: 15%;
+    right: 43.6%;
+    top: 14%;
 }
 
 .gato1 {
     position: absolute;
     width: 8%;
-    left: 22%;
-    top: 21%;
+    left: 24%;
+    top: 25%;
 }
 
 .gato2 {
     position: absolute;
     width: 8%;
     right: 36%;
-    bottom: 24%;
+    bottom: 21%;
 }
 
 .gato3 {
     position: absolute;
     width: 8%;
     right: 27%;
-    bottom: 51%;
+    bottom: 50%;
 }
-.cantidad{
+
+.cantidad {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -84,45 +90,381 @@ body{
     border: solid black;
     font-family: sans-serif;
 }
-.cantidad img{
+
+.cantidad img {
     width: 40%;
 }
-.datos{
+
+.datos {
     position: absolute;
     right: 25%;
 }
 
-.animaCora{
-    animation: salto 1s ease forwards;}
-
-@keyframes salto {
-        0%{transform: translateY(0); opacity: 1;}
-        30%{transform: translateY(-60px);}
-        100%{transform: translateY(0); opacity: 0;;
-        }
+.anima_diamante1 {
+    animation: salto1 3s ease infinite;
 }
 
-.animaGato{
-     animation: animaGato 4s  forwards
+@keyframes salto1 {
+    50% {
+        transform: translateY(-23px);
     }
-    @keyframes animaGato {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(-20%);
-        }
+}
+
+.anima_diamante2 {
+    animation: salto2 4s ease infinite;
+}
+
+@keyframes salto2 {
+    50% {
+        transform: translateY(-23px);
+    }
+}
+
+.anima_diamante3 {
+    animation: salto3 3s ease infinite;
+}
+
+@keyframes salto3 {
+    50% {
+        transform: translateY(23px);
+    }
+}
+
+.anima_cora {
+    animation: forwards ease 1s animaCora;
+}
+
+@keyframes animaCora {
+    100% {
+        transform: translateY(-20px) scale(105%);
+        opacity: 0;
+    }
+}
+
+.anima_gato {
+    animation: forwards ease-in 1s animaGato;
+}
+
+@keyframes animaGato {
+    50% {
+        transform: translateY(-20px);
+        opacity: 1;
     }
 
-    /* fondo_2 ***************************************************************************** */
-
-    .fondo_2{
-            background-image: url(imagenes/fondo2.jpg);
-            width: 750px;
-            height: 500px;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 10px;
-            border: solid 3px black;
+    100% {
+        transform: translateY(0);
+        opacity: 0;
     }
+}
+
+/* botones ***************************************************************************** */
+
+.izquierda {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 280px;
+    left: 70px;
+    font-size: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.derecha {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 280px;
+    right: 80px;
+    font-size: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 5px;
+}
+
+/* fondo_2 ***************************************************************************** */
+
+/* .fondo2{
+    background: url(imagenes/fondo2.jpg);
+    width: 750px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: solid 3px black;
+    overflow: hidden;
+}
+
+.datos2{
+    display: flex;
+    width: 20%;
+    background-color: rgba(128, 128, 128, 0.466);
+    font-size: 4vh;
+    border-radius: 2vh;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    padding: 2vh;
+    margin: 3vh;
+    border: solid 3px black;
+    color: white;
+}
+.datos2 img{
+    width: 50%;
+}
+
+.serOne{
+    width: 15%;
+    position: relative;
+    bottom: -26%;
+    left: 45%;
+}
+.escorp{
+    width: 12%;
+    position: relative;
+    bottom: -37%;
+    right: -50%;
+    animation: infinite 10s linear escorpionMove;
+}
+@keyframes escorpionMove {
+    0%{
+        transform: translateX(-40vh) scaleX(1);
+    }
+    3%{
+        transform: translateX(-40vh) scaleX(-1);
+    }
+    50%{
+        transform: translateX(30vh) scaleX(-1);
+    }
+    53%{
+        transform: translateX(30vh) scaleX(1);
+    }
+    100%{
+        transform: translateX(-40vh) scaleX(1);
+    }
+}
+
+.espi_1{
+    position: relative;
+    width: 18%;
+    left: 35%;
+    bottom: -25%;
+    animation: esOne infinite linear 5s;
+}
+@keyframes esOne {
+    0%{
+        transform: translateX(-80vh);
+    }
+    100%{
+        transform: translateX(60vh) rotate(720deg);
+    }
+}
+.espi_2{
+    position: relative;
+    width: 18%;
+    left: 35%;
+    bottom: -35%;
+    animation: esTwo infinite linear 10s;
+}
+@keyframes esTwo {
+    0%{
+        transform: translateX(-100vh);
+    }
+    100%{
+        transform: translateX(60vh) rotate(720deg);
+    }
+}
+.espi_3{
+    position: relative;
+    width: 18%;
+    left: 35%;
+    bottom: -40%;
+    animation: esThree infinite linear 6s;
+}
+@keyframes esThree {
+    0%{
+        transform: translateX(-130vh);
+    }
+    100%{
+        transform: translateX(60vh) rotate(720deg);
+    }
+}
+.espi_4{
+    position: relative;
+    width: 18%;
+    left: 35%;
+    bottom: -50%;
+    animation: esFour infinite linear 5s;
+}
+@keyframes esFour {
+    0%{
+        transform: translateX(-170vh);
+    }
+    100%{
+        transform: translateX(60vh) rotate(720deg);
+    }
+}
+
+.chaoEspicur{
+    opacity: 0;
+    transition: ease .5s;
+}
+ */
+/* fondo_3 ***************************************************************************** */
+
+/* .fondo3{
+    background: url(imagenes/fondo3.jpg);
+    width: 750px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: solid 3px black;
+    overflow: hidden;
+    margin-bottom: 12vh;
+}
+.cantidad3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 8px;
+    border-radius: 10px;
+    border: solid black;
+    font-family: sans-serif;
+}
+.cantidad3 img{
+    width: 20%;
+}
+.cantidad4{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 8px;
+    border-radius: 10px;
+    border: solid black;
+    font-family: sans-serif;
+}
+.cantidad4 img{
+    width: 20%;
+}
+.tierra{
+    position: relative;
+    width: 45%;
+    left: 27%;
+    bottom: -20%;
+}
+.meteoro1{
+    position: relative;
+    width: 10%;
+    top: -50%;
+    left: 20%;
+    animation: infinite linear 5s meteo1;
+}
+@keyframes meteo1 {
+    0%{
+        transform: translateY(-50vh);
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+}
+.meteoro2{
+    position: relative;
+    width: 20%;
+    top: -50%;
+    left: -52%;
+    animation: infinite linear 7s meteo2;
+}
+@keyframes meteo2 {
+    0%{
+        transform: translateY(-50vh);
+    }
+    40%{
+        transform: translateY(-50vh);
+    }
+    60%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+}
+.meteoro3{
+    position: relative;
+    width: 5%;
+    top: -50%;
+    left: -46%;
+    animation: infinite linear 10s meteo3;
+}
+@keyframes meteo3 {
+    0%{
+        transform: translateY(-50vh);
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+}
+.meteoro4{
+    position: relative;
+    width: 15%;
+    top: -50%;
+    left: 0%;
+    animation: infinite linear 8s meteo4;
+}
+@keyframes meteo4 {
+    0%{
+        transform: translateY(-50vh);
+    }
+    40%{
+        transform: translateY(-50vh);
+    }
+    60%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+}
+
+.nave{
+    position: relative;
+    width: 10%;
+    left: 44%;
+    bottom: 30%;
+}
+.naveHidden{
+    opacity: 0;
+}
+.naveDespega{
+    opacity: 1;
+    animation: naveHola 2s forwards ease;
+    transition: ease .5s;
+}
+@keyframes naveHola {
+    100%{
+        transform: translateY(-20vh) scale(200%);
+    }
+}
+
+.chaoMeteo{
+    opacity: 0;
+    transition: ease .5s;
+} */
