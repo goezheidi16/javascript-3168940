@@ -1,3 +1,28 @@
+/* miniaturas ***************************************************************************** */
+
+.miniatura{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    margin: 8px;
+    border-radius: 10px;
+    border: solid black 3px;
+    font-family: sans-serif;
+}
+
+/****************************************************************************** */
+
+.activa{
+    display: block!important;
+}
+
+.escena{
+    display: none;
+}
+
 * {
     margin: 0;
 }
@@ -159,7 +184,7 @@ body {
 
 /* botones ***************************************************************************** */
 
-.izquierda {
+.anterior {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -172,7 +197,7 @@ body {
 
 }
 
-.derecha {
+.siguiente{
     position: absolute;
     width: 100px;
     height: 100px;
@@ -184,16 +209,9 @@ body {
     justify-content: center;
 }
 
-.mini{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 5px;
-}
-
 /* fondo_2 ***************************************************************************** */
 
-/* .fondo2{
+ .fondo2{
     background: url(imagenes/fondo2.jpg);
     width: 750px;
     height: 500px;
@@ -323,7 +341,7 @@ body {
  */
 /* fondo_3 ***************************************************************************** */
 
-/* .fondo3{
+ .fondo3{
     background: url(imagenes/fondo3.jpg);
     width: 750px;
     height: 500px;
@@ -467,4 +485,4 @@ body {
 .chaoMeteo{
     opacity: 0;
     transition: ease .5s;
-} */
+}

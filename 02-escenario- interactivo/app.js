@@ -81,3 +81,50 @@ meteoro.forEach(elementMeteo => {
         }
     }
 });
+
+/* carrusel */
+
+//1. variables
+
+const escena = document.querySelectorAll(".escena")
+const anterior = document.querySelector(".anterior")
+const siguiente = document.querySelector(".siguiente")
+const miniaturas = document.querySelectorAll(".miniatura")
+let indice = 0
+
+console.log(escena)
+console.log(anterior)
+console.log(siguiente)
+console.log(miniaturas)
+
+//2. funciones
+
+function mostrarEscena(i){
+    //asigna la clase escena a todas las pantallas
+    for (let j = 0; j < escena.length; j++) {
+        escena[j].classList.add("escena")
+    }
+
+    escena[1].classList.add("activa")
+    indice = i
+}
+
+//para mostrar la pantalla 1 al iniciar
+mostrarEscena(0)
+
+anterior.addEventListener("click", function(){
+    indice = indice - 1
+    if(indice < 0){ //para siguiente if(indice >= escena.length)
+        indice = escena.length - 1 //va a la primera imagen
+    }
+    mostrarEscena(indice)
+})
+
+siguiente.addEventListener("click", function(){
+    indice = indice + 1
+    if(indice >= escena.length){
+        indice = 0
+    }
+    mostrarEscena(indice)
+
+})
