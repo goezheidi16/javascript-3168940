@@ -1,3 +1,6 @@
+const miau = new Audio("./audios/miau.mp3")
+const bling = new Audio("./audios/cora.mp3")
+
 let contadorCora = document.querySelector('#contador_1')
 let contador_1 = 0
 
@@ -13,6 +16,8 @@ corazon.forEach(elementCora => {
     contadorCora.textContent = contador_1
     elementCora.classList.add('anima_cora')
     elementCora.removeEventListener('click', contador_cora)
+
+    bling.play()
   }
 });
 /*querySelectorAll es para almacenar en una sola variable varios elementos del index que tenga una misma clase o id */
@@ -25,6 +30,8 @@ gato.forEach(elementGato => {
     contadorGato.textContent = contador_2
     elementGato.classList.add('anima_gato')
     elementGato.removeEventListener('click', contador_gato)
+
+    miau.play()
   }
 });
 /*forEach busca los elementos dentro de la variable y le da una misma funcion o evento a cada elemento */

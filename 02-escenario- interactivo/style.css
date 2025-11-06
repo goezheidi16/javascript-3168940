@@ -56,7 +56,6 @@ body {
     background-repeat: no-repeat;
     border-radius: 10px;
     border: solid 3px black;
-    margin-top: 12vh;
 }
 
 .diamante1, .diamante2, .diamante3,
@@ -66,14 +65,14 @@ body {
 }
 
 /* posiciones individuales */
-.diamante1 { width: 8%; left: 35%; bottom: 35%; }
-.diamante2 { width: 8%; left: 50%; top: 24%; }
-.diamante3 { width: 8%; right: 27%; bottom: 38%; }
-.corazon1  { width: 5%; left: 36.3%; top: 37.5%; }
-.corazon2  { width: 5%; right: 43.6%; top: 14%; }
-.gato1     { width: 8%; left: 24%; top: 25%; }
-.gato2     { width: 8%; right: 36%; bottom: 21%; }
-.gato3     { width: 8%; right: 27%; bottom: 50%; }
+.diamante1 { width: 13%; left: 25%; bottom: 35%; }
+.diamante2 { width: 13%; left: 50%; top: 24%; }
+.diamante3 { width: 13%; right: 10%; bottom: 38%; }
+.corazon1  { width: 10%; left: 26.5%; top: 31%; }
+.corazon2  { width: 10%; right: 38.5%; top: 10%; }
+.gato1     { width: 13%; left: 1%; top: 17.5%; }
+.gato2     { width: 13%; right: 36%; bottom: 15%; }
+.gato3     { width: 13%; right: 10%; bottom: 52%; }
 
 .cantidad {
     display: flex;
@@ -94,7 +93,7 @@ body {
 
 .datos {
     position: absolute;
-    right: 25%;
+    right: 0%;
 }
 
 /* Animaciones de diamantes */
@@ -276,7 +275,6 @@ body {
     border-radius: 10px;
     border: solid 3px black;
     overflow: hidden;
-    margin-bottom: 12vh;
 }
 
 .cantidad3, .cantidad4 {
