@@ -1,84 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escenario interactivo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div>
-    <div class="fondo1 activa">
-        <div class="datos">
+  <div class="galeria">
+    <div class="viewport">
+      <!-- Contenedor principal de fondos -->
+      <div>
+        <!-- Fondo 1 -->
+        <div class="fondo1 escena">
+          <div class="datos">
             <div class="cantidad">
-                <img src="./imagenes/corazon.webp" alt="">
-                <h2 id="contador_1">0</h2>
+              <img src="./imagenes/corazon.webp" alt="corazon">
+              <h2 id="contador_1">0</h2>
             </div>
+
             <div class="cantidad">
-                <img src="./imagenes/gato.png" alt="">
-                <h2 id="contador_2">0</h2>
+              <img src="./imagenes/gato.png" alt="gato">
+              <h2 id="contador_2">0</h2>
             </div>
+          </div>
+
+          <img class="diamante1 anima_diamante1" src="imagenes/diamante.png" alt="diamante1">
+          <img class="diamante2 anima_diamante2" src="imagenes/diamante.png" alt="diamante2">
+          <img class="diamante3 anima_diamante3" src="imagenes/diamante.png" alt="diamante3">
+
+          <img id="id_corazon" class="corazon1" src="imagenes/corazon.webp" alt="corazon1">
+          <img id="id_corazon" class="corazon2" src="imagenes/corazon.webp" alt="corazon2">
+
+          <img id="id_gato" class="gato1" src="imagenes/gato.png" alt="gato1">
+          <img id="id_gato" class="gato2" src="imagenes/gato.png" alt="gato2">
+          <img id="id_gato" class="gato3" src="imagenes/gato.png" alt="gato3">
         </div>
 
-        <img class="diamante1 anima_diamante1" src="imagenes/diamante.png" alt="diamante1">
-        <img class="diamante2 anima_diamante2" src="imagenes/diamante.png" alt="diamante2">
-        <img class="diamante3 anima_diamante3" src="imagenes/diamante.png" alt="diamante3">
+        <!-- Fondo 2 -->
+        <div class="fondo2 escena">
+          <div class="datos2">
+            <h2 id="contador_espi">0</h2>
+            <img src="imagenes/espicursor.png" alt="espi">
+          </div>    
 
-        <img id="id_corazon" class="corazon1" src="imagenes/corazon.webp" alt="corazon1">
-        <img id="id_corazon" class="corazon2" src="imagenes/corazon.webp" alt="corazon2">
+          <img class="serOne" src="imagenes/serpiente1.png" alt="serpiente1">
 
-        <img id="id_gato" class="gato1" src="imagenes/gato.png" alt="gato1">
-        <img id="id_gato" class="gato2" src="imagenes/gato.png" alt="gato2">
-        <img id="id_gato" class="gato3" src="imagenes/gato.png" alt="gato3">
-     </div>
+          <img id="espicursores" class="espi_1" src="imagenes/espicursor.png" alt="espicursor">
+          <img id="espicursores" class="espi_2" src="imagenes/espicursor.png" alt="espicursor">
+          <img id="espicursores" class="espi_3" src="imagenes/espicursor.png" alt="espicursor">
+          <img id="espicursores" class="espi_4" src="imagenes/espicursor.png" alt="espicursor">
 
-    <!--  fondo 2 **************************************************************************** -->
-    
-     <div class="fondo2 escena">
-        <div class="datos2">
-                <h2 id="contador_espi">0</h2>
-                <img src="imagenes/espicursor.png" alt="espi">
+          <img class="escorp" src="imagenes/escorpión.png" alt="escorpión">
         </div>
-        <img class="serOne" src="imagenes/serpiente1.png" alt="serpiente1">
 
-        <img id="espicursores" class="espi_1" src="imagenes/espicursor.png" alt="espicursor">
-        <img id="espicursores" class="espi_2" src="imagenes/espicursor.png" alt="espicursor">
-        <img id="espicursores" class="espi_3" src="imagenes/espicursor.png" alt="espicursor">
-        <img id="espicursores" class="espi_4" src="imagenes/espicursor.png" alt="espicursor">
-
-        <img class="escorp" src="imagenes/escorpión.png" alt="">
-     </div>
-
-    <!--  fondo 3 **************************************************************************** -->
-
-     <div class="fondo3 escena">
-        <div class="datos3">
+        <!-- Fondo 3 -->
+        <div class="fondo3 escena">
+          <div class="datos3">
             <div class="cantidad4">
-                <img src="./imagenes/cometa.png" alt="">
-                <h2 id="contadorMeteoro">0</h2>
+              <img src="./imagenes/cometa.png" alt="cometa">
+              <h2 id="contadorMeteoro">0</h2>
             </div>
+
             <div class="cantidad3">
-                <img src="./imagenes/nave.png" alt="">
-                <h2 id="naveText">Sin Despegar</h2>
+              <img src="./imagenes/nave.png" alt="nave">
+              <h2 id="naveText">Sin Despegar</h2>
             </div>
+          </div>
+
+          <img class="tierra" src="imagenes/tierra.png" alt="tierra">
+
+          <img class="meteoro1" id="meteoros" src="imagenes/cometa.png" alt="cometa">
+          <img class="meteoro2" id="meteoros" src="imagenes/cometa.png" alt="cometa">
+          <img class="meteoro3" id="meteoros" src="imagenes/cometa.png" alt="cometa">
+          <img class="meteoro4" id="meteoros" src="imagenes/cometa.png" alt="cometa">
+
+          <img class="nave naveHidden" id="nave" src="imagenes/nave.png" alt="nave">
         </div>
-        <img class="tierra" src="imagenes/tierra.png" alt="">
-
-        <img class="meteoro1" id="meteoros" src="imagenes/cometa.png" alt="cometa">
-        <img class="meteoro2" id="meteoros" src="imagenes/cometa.png" alt="cometa">
-        <img class="meteoro3" id="meteoros" src="imagenes/cometa.png" alt="cometa">
-        <img class="meteoro4" id="meteoros"  src="imagenes/cometa.png" alt="cometa">
-
-        <img class="nave naveHidden" id="nave" src="imagenes/nave.png" alt="">
       </div>
- 
+    </div>
+
+    <!-- Controles inferiores -->
+    <div class="controles">
+      <button class="anterior">⬅️</button>
+
+      <div class="miniaturas">
+        <img class="miniatura activa" src="imagenes/mini_fondo1.png" alt="mini1" data-set="0">
+        <img class="miniatura" src="imagenes/mini_fondo2.png" alt="mini2" data-set="1">
+        <img class="miniatura" src="imagenes/mini_fondo3.png" alt="mini3" data-set="2">
       </div>
-        <button class="anterior" >⬅️</button>
-        <button class="siguiente" >➡️</button>
 
-        <img class="miniatura" src="imagenes/mini_fondo1.png" alt="mini1">
-        <img class="miniatura" src="imagenes/mini_fondo2.png" alt="mini2">
-        <img class="miniatura" src="imagenes/mini_fondo3.png" alt="mini3">
+      <button class="siguiente">➡️</button>
+    </div>
+  </div>
 
-    <script src="./app.js"></script>
+  <script src="./app.js"></script>
 </body>
+</html>

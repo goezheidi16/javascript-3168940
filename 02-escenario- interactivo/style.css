@@ -1,30 +1,39 @@
 /* miniaturas ***************************************************************************** */
 
-.miniatura{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 60px;
-    background-color: rgb(255, 255, 255);
-    margin: 8px;
-    border-radius: 10px;
-    border: solid black 3px;
-    font-family: sans-serif;
-}
-
-/****************************************************************************** */
-
-.activa{
-    display: block!important;
-}
-
-.escena{
-    display: none;
-}
 
 * {
     margin: 0;
+    box-sizing: border-box;
+}
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.miniaturas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* espacio entre cada miniatura */
+  margin-top: 20px;
+  width: 20px;
+  height: auto;
+}
+.miniaturas img{
+    width: 200px;
+    height: auto;
+
+}
+/****************************************************************************** */
+
+.activa {
+    display: block !important;
+}
+
+.escena {
+    display: none;
 }
 
 body {
@@ -35,8 +44,11 @@ body {
     gap: 10vh;
 }
 
+/* fondo_1 ***************************************************************************** */
+
 .fondo1 {
-    background: url(./imagenes/fondo\ lindo.jpg);
+    position: relative; /* Importante para posicionar elementos absolutos dentro */
+    background: url(imagenes/fondo\ lindo.jpg);
     width: 750px;
     height: 500px;
     background-position: center;
@@ -47,61 +59,21 @@ body {
     margin-top: 12vh;
 }
 
-.diamante1 {
+.diamante1, .diamante2, .diamante3,
+.corazon1, .corazon2,
+.gato1, .gato2, .gato3 {
     position: absolute;
-    width: 8%;
-    left: 35%;
-    bottom: 35%;
 }
 
-.diamante2 {
-    position: absolute;
-    width: 8%;
-    left: 50%;
-    top: 24%;
-}
-
-.diamante3 {
-    position: absolute;
-    width: 8%;
-    right: 27%;
-    bottom: 38%;
-}
-
-.corazon1 {
-    position: absolute;
-    width: 5%;
-    left: 36.3%;
-    top: 37.5%;
-}
-
-.corazon2 {
-    position: absolute;
-    width: 5%;
-    right: 43.6%;
-    top: 14%;
-}
-
-.gato1 {
-    position: absolute;
-    width: 8%;
-    left: 24%;
-    top: 25%;
-}
-
-.gato2 {
-    position: absolute;
-    width: 8%;
-    right: 36%;
-    bottom: 21%;
-}
-
-.gato3 {
-    position: absolute;
-    width: 8%;
-    right: 27%;
-    bottom: 50%;
-}
+/* posiciones individuales */
+.diamante1 { width: 8%; left: 35%; bottom: 35%; }
+.diamante2 { width: 8%; left: 50%; top: 24%; }
+.diamante3 { width: 8%; right: 27%; bottom: 38%; }
+.corazon1  { width: 5%; left: 36.3%; top: 37.5%; }
+.corazon2  { width: 5%; right: 43.6%; top: 14%; }
+.gato1     { width: 8%; left: 24%; top: 25%; }
+.gato2     { width: 8%; right: 36%; bottom: 21%; }
+.gato3     { width: 8%; right: 27%; bottom: 50%; }
 
 .cantidad {
     display: flex;
@@ -109,10 +81,10 @@ body {
     align-items: center;
     width: 80px;
     height: 40px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     margin: 8px;
     border-radius: 10px;
-    border: solid black;
+    border: solid 1px black;
     font-family: sans-serif;
 }
 
@@ -125,93 +97,67 @@ body {
     right: 25%;
 }
 
+/* Animaciones de diamantes */
 .anima_diamante1 {
     animation: salto1 3s ease infinite;
 }
-
 @keyframes salto1 {
-    50% {
-        transform: translateY(-23px);
-    }
+    50% { transform: translateY(-23px); }
 }
 
 .anima_diamante2 {
     animation: salto2 4s ease infinite;
 }
-
 @keyframes salto2 {
-    50% {
-        transform: translateY(-23px);
-    }
+    50% { transform: translateY(-23px); }
 }
 
 .anima_diamante3 {
     animation: salto3 3s ease infinite;
 }
-
 @keyframes salto3 {
-    50% {
-        transform: translateY(23px);
-    }
+    50% { transform: translateY(23px); }
 }
 
+/* Corazones y gatos */
 .anima_cora {
-    animation: forwards ease 1s animaCora;
+    animation: animaCora 1s ease forwards;
 }
-
 @keyframes animaCora {
     100% {
-        transform: translateY(-20px) scale(105%);
+        transform: translateY(-20px) scale(1.05);
         opacity: 0;
     }
 }
 
 .anima_gato {
-    animation: forwards ease-in 1s animaGato;
+    animation: animaGato 1s ease-in forwards;
 }
-
 @keyframes animaGato {
-    50% {
-        transform: translateY(-20px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 0;
-    }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0; }
 }
 
 /* botones ***************************************************************************** */
 
-.anterior {
+.anterior, .siguiente {
     position: absolute;
     width: 100px;
     height: 100px;
     top: 280px;
-    left: 70px;
-    font-size: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.siguiente{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 280px;
-    right: 80px;
     font-size: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.anterior { left: 70px; }
+.siguiente { right: 80px; }
 
 /* fondo_2 ***************************************************************************** */
 
- .fondo2{
+.fondo2 {
+    position: relative;
     background: url(imagenes/fondo2.jpg);
     width: 750px;
     height: 500px;
@@ -223,7 +169,7 @@ body {
     overflow: hidden;
 }
 
-.datos2{
+.datos2 {
     display: flex;
     width: 20%;
     background-color: rgba(128, 128, 128, 0.466);
@@ -238,110 +184,89 @@ body {
     border: solid 3px black;
     color: white;
 }
-.datos2 img{
-    width: 50%;
-}
 
-.serOne{
+.datos2 img { width: 50%; }
+
+.serOne {
     width: 15%;
     position: relative;
     bottom: -26%;
     left: 45%;
 }
-.escorp{
+
+.escorp {
     width: 12%;
     position: relative;
     bottom: -37%;
     right: -50%;
-    animation: infinite 10s linear escorpionMove;
-}
-@keyframes escorpionMove {
-    0%{
-        transform: translateX(-40vh) scaleX(1);
-    }
-    3%{
-        transform: translateX(-40vh) scaleX(-1);
-    }
-    50%{
-        transform: translateX(30vh) scaleX(-1);
-    }
-    53%{
-        transform: translateX(30vh) scaleX(1);
-    }
-    100%{
-        transform: translateX(-40vh) scaleX(1);
-    }
+    animation: escorpionMove 10s linear infinite;
 }
 
-.espi_1{
+@keyframes escorpionMove {
+    0%   { transform: translateX(-40vh) scaleX(1); }
+    3%   { transform: translateX(-40vh) scaleX(-1); }
+    50%  { transform: translateX(30vh) scaleX(-1); }
+    53%  { transform: translateX(30vh) scaleX(1); }
+    100% { transform: translateX(-40vh) scaleX(1); }
+}
+
+.espi_1 {
     position: relative;
     width: 18%;
     left: 35%;
     bottom: -25%;
-    animation: esOne infinite linear 5s;
+    animation: esOne 5s linear infinite;
 }
 @keyframes esOne {
-    0%{
-        transform: translateX(-80vh);
-    }
-    100%{
-        transform: translateX(60vh) rotate(720deg);
-    }
+    0% { transform: translateX(-80vh); }
+    100% { transform: translateX(60vh) rotate(720deg); }
 }
-.espi_2{
+
+.espi_2 {
     position: relative;
     width: 18%;
     left: 35%;
     bottom: -35%;
-    animation: esTwo infinite linear 10s;
+    animation: esTwo 10s linear infinite;
 }
 @keyframes esTwo {
-    0%{
-        transform: translateX(-100vh);
-    }
-    100%{
-        transform: translateX(60vh) rotate(720deg);
-    }
+    0% { transform: translateX(-100vh); }
+    100% { transform: translateX(60vh) rotate(720deg); }
 }
-.espi_3{
+
+.espi_3 {
     position: relative;
     width: 18%;
     left: 35%;
     bottom: -40%;
-    animation: esThree infinite linear 6s;
+    animation: esThree 6s linear infinite;
 }
 @keyframes esThree {
-    0%{
-        transform: translateX(-130vh);
-    }
-    100%{
-        transform: translateX(60vh) rotate(720deg);
-    }
+    0% { transform: translateX(-130vh); }
+    100% { transform: translateX(60vh) rotate(720deg); }
 }
-.espi_4{
+
+.espi_4 {
     position: relative;
     width: 18%;
     left: 35%;
     bottom: -50%;
-    animation: esFour infinite linear 5s;
+    animation: esFour 5s linear infinite;
 }
 @keyframes esFour {
-    0%{
-        transform: translateX(-170vh);
-    }
-    100%{
-        transform: translateX(60vh) rotate(720deg);
-    }
+    0% { transform: translateX(-170vh); }
+    100% { transform: translateX(60vh) rotate(720deg); }
 }
 
-.chaoEspicur{
+.chaoEspicur {
     opacity: 0;
-    transition: ease .5s;
+    transition: opacity .5s ease;
 }
- */
+
 /* fondo_3 ***************************************************************************** */
 
- .fondo3{
+.fondo3 {
+    position: relative;
     background: url(imagenes/fondo3.jpg);
     width: 750px;
     height: 500px;
@@ -353,136 +278,107 @@ body {
     overflow: hidden;
     margin-bottom: 12vh;
 }
-.cantidad3{
+
+.cantidad3, .cantidad4 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: solid 1px black;
+    font-family: sans-serif;
+    margin: 8px;
+    height: 40px;
+}
+
+.cantidad3 {
     width: 250px;
-    height: 40px;
-    background-color: rgb(255, 255, 255);
-    margin: 8px;
-    border-radius: 10px;
-    border: solid black;
-    font-family: sans-serif;
 }
-.cantidad3 img{
-    width: 20%;
-}
-.cantidad4{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.cantidad4 {
     width: 100px;
-    height: 40px;
-    background-color: rgb(255, 255, 255);
-    margin: 8px;
-    border-radius: 10px;
-    border: solid black;
-    font-family: sans-serif;
 }
-.cantidad4 img{
+
+.cantidad3 img, .cantidad4 img {
     width: 20%;
 }
-.tierra{
+
+.tierra {
     position: relative;
     width: 45%;
     left: 27%;
     bottom: -20%;
 }
-.meteoro1{
+
+/* meteoros */
+.meteoro1 {
     position: relative;
     width: 10%;
     top: -50%;
     left: 20%;
-    animation: infinite linear 5s meteo1;
+    animation: meteo1 5s linear infinite;
 }
 @keyframes meteo1 {
-    0%{
-        transform: translateY(-50vh);
-    }
-    100%{
-        transform: translateY(100vh);
-    }
+    0% { transform: translateY(-50vh); }
+    100% { transform: translateY(100vh); }
 }
-.meteoro2{
+
+.meteoro2 {
     position: relative;
     width: 20%;
     top: -50%;
     left: -52%;
-    animation: infinite linear 7s meteo2;
+    animation: meteo2 7s linear infinite;
 }
 @keyframes meteo2 {
-    0%{
-        transform: translateY(-50vh);
-    }
-    40%{
-        transform: translateY(-50vh);
-    }
-    60%{
-        transform: translateY(100vh);
-    }
-    100%{
-        transform: translateY(100vh);
-    }
+    0%, 40% { transform: translateY(-50vh); }
+    60%, 100% { transform: translateY(100vh); }
 }
-.meteoro3{
+
+.meteoro3 {
     position: relative;
     width: 5%;
     top: -50%;
     left: -46%;
-    animation: infinite linear 10s meteo3;
+    animation: meteo3 10s linear infinite;
 }
 @keyframes meteo3 {
-    0%{
-        transform: translateY(-50vh);
-    }
-    100%{
-        transform: translateY(100vh);
-    }
+    0% { transform: translateY(-50vh); }
+    100% { transform: translateY(100vh); }
 }
-.meteoro4{
+
+.meteoro4 {
     position: relative;
     width: 15%;
     top: -50%;
     left: 0%;
-    animation: infinite linear 8s meteo4;
+    animation: meteo4 8s linear infinite;
 }
 @keyframes meteo4 {
-    0%{
-        transform: translateY(-50vh);
-    }
-    40%{
-        transform: translateY(-50vh);
-    }
-    60%{
-        transform: translateY(100vh);
-    }
-    100%{
-        transform: translateY(100vh);
-    }
+    0%, 40% { transform: translateY(-50vh); }
+    60%, 100% { transform: translateY(100vh); }
 }
 
-.nave{
+/* nave */
+.nave {
     position: relative;
     width: 10%;
     left: 44%;
     bottom: 30%;
 }
-.naveHidden{
+.naveHidden {
     opacity: 0;
 }
-.naveDespega{
+.naveDespega {
     opacity: 1;
-    animation: naveHola 2s forwards ease;
-    transition: ease .5s;
+    animation: naveHola 2s ease forwards;
+    transition: opacity .5s ease;
 }
 @keyframes naveHola {
-    100%{
-        transform: translateY(-20vh) scale(200%);
-    }
+    100% { transform: translateY(-20vh) scale(2); }
 }
 
-.chaoMeteo{
+.chaoMeteo {
     opacity: 0;
-    transition: ease .5s;
+    transition: opacity .5s ease;
 }
+
