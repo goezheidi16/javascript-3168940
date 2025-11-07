@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    border: 0;
+}
+
+.fondo{
+    width: 100vh;
+    height: 400vh;
+    background-color: blueviolet;
+    border: 2px;
+}
+
+h2{
+    color: azure;
+    background-color: black;
+    padding: 1vh;
+}
