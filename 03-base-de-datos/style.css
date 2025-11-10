@@ -5,15 +5,21 @@
     border: 0;
 }
 
-.fondo{
-    width: 100vh;
-    height: 400vh;
-    background-color: blueviolet;
-    border: 2px;
+.padre{
+    background-image: url(imagen/netflix.png);
+    height: 100vh;  /* Ocupa toda la pantalla */
+    background-size: cover;  /* Para que cubra todo el espacio */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que se repita */
+    overflow: hidden;
 }
 
-h2{
-    color: azure;
-    background-color: black;
-    padding: 1vh;
+h1{
+    color: rgb(80, 180, 142);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+}
+
+.sinopsis{
+    margin-top: 20%;
 }
