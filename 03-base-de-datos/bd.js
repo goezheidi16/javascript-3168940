@@ -1,8 +1,8 @@
 let comic = {
-  "nombreComic": "Andrea Echeverri",
+  "nombreComic": "TITULO DEL COMIC",
   "numeroCapitulos": "3",
-  "genero": "....",
-  "sipnosis": "...",
+  "genero": "Fantasia",
+  "sinopsis": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo laboriosam obcaecati eius voluptatem minus mollitia tenetur impedit quo nemo ipsa fuga nesciunt eaque distinctio excepturi magni praesentium maxime corrupti expedita repudiandae itaque, libero, repellat est! Reiciendis, cumque quisquam amet aut excepturi blanditiis consequuntur architecto. Nemo nobis temporibus deserunt rem vitae. Architecto quibusdam ea enim harum reprehenderit facere ut possimus porro.",
   "autores": ["Maria Isabel", "Heidi"],
   "portadaComic": "",
   "year": 2025,

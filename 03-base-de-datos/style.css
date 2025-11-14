@@ -13,6 +13,10 @@
     background-repeat: no-repeat;  /* Evita que se repita */
     overflow: hidden;
     overflow: scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1{
@@ -26,6 +30,19 @@ h1{
 
 .sinopsis{
     margin-top: 20%;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    padding: 2vh;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.sinopsis p{
+    width: 100%;
 }
 
 p{
@@ -33,25 +50,32 @@ p{
     font-family:'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
     color: aliceblue;
     margin: 0 25px;
+    width: 40%;
 }
 
 .caps{
-    margin: 20px 25px ;
+    display: flex;
+    gap: 17vh;
+    margin: 3vh 0 10vh 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.temporal1{
-    width: 8%;
-    margin: 0px 25px ;
+.caps img{
+    width: 13%;
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh .5vh rgba(0, 0, 0, 0.452);
+    cursor: pointer;
+    transition: ease .5s;
 }
 
-.temporal2{
-    width: 7.6%;
-    margin: 0px 25px ;
-}
-
-.temporal3{
-    width: 6.7%;
-    margin: 0px 25px ;
+.caps img:hover{
+    scale: 105%;
+    transition: ease .5s;
+    box-shadow: 0 0 1vh .5vh rgba(255, 255, 255, 0.452);
 }
 
 h2{
@@ -65,16 +89,103 @@ h2{
 }
 
 .person{
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
     background-color: rgb(11, 8, 44);
-    margin-bottom: 2%;
-    margin-right: 2%;
-    margin-left: 2%;
     opacity: 95%;
+    gap: 8vh;
+    margin-bottom: 7vh;
+    padding-bottom: 7vh;
+    border-radius: 1vh;
 }
 
-.personajes{
-    width: 15%;
-    margin: 110px ;
+.person h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 8vh;
+}
+
+.tarjeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vh;
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.466);
+    box-shadow: 0 0 1vh .5vh rgba(9, 0, 54, 0.452);
+    padding: 2vh;
+    border-radius: 1vh;
+    transition: ease .5s;
+}
+
+.tarjeta:hover{
+    scale: 105%;
+    transition: ease .5s;
+}
+
+.tarjeta img{
+    width: 50%;
+    border-radius: 1vh;
+}
+
+.ordenDeTarjeta{
+    width: 50%;
+    height: 40vh;
+    text-align: start;
+}
+
+.ordenDeTarjeta h2{
+    width: max-content;
+    margin: 0;
+}
+
+.ordenDeTarjeta p{
+    margin: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 570px) {
+    .sinopsis{
+        width: 90%;
+    }
+    .sinopsis h1{
+        font-size: 5vh;
+    }
+    .sinopsis p{
+        font-size: 2.5vh;
+    }
+    .caps{
+        gap: 5vh;
+    }
+    .caps img{
+        width: 25%;
+    }
+    .person h2{
+        font-size: 4.5vh;
+    }
+    .tarjeta{
+        width: 80%;
+        height: 50vh;
+        flex-direction: column;
+    }
+    .tarjeta img{
+        width: 90%;
+        height: 20vh;
+        object-fit: cover;
+        object-position: top;
+    }
+    .ordenDeTarjeta{
+        width: 90%;
+        text-align: center;
+    }
+    .ordenDeTarjeta h2{
+        font-size: 4vh;
+        width: 100%;
+    }
+    .ordenDeTarjeta p{
+        font-size: 2.2vh;
+    }
 }
