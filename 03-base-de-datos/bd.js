@@ -6,6 +6,25 @@ let comic = {
   "autores": ["Maria Isabel", "Heidi"],
   "portadaComic": "",
   "year": 2025,
+
+  "personajes":[
+    {
+      "nombre":"Andrea Echeverri actual",
+      "descripción":"hgusfgfdgdjgfdguetfdgubdbgfghghghhgghhgghhghfhghghggbgfvbgbgvbhfdhbjdvxn",
+      "imagen":"./imagen/img1.jpg"
+    },
+    {
+      "nombre":"Andrea Echeverri joven",
+      "descripción":"hgusfgfdgdjgfdguetfdgubdbgfghghghhgghhgghhghfhghghggbgfvbgbgvbhfdhbjdvxn",
+      "imagen":"./imagen/img2.jpg"
+    },
+    {
+      "nombre":"Emoción",
+      "descripción":"hgusfgfdgdjgfdguetfdgubdbgfghghghhgghhgghhghfhghghggbgfvbgbgvbhfdhbjdvxn",
+      "imagen":"./imagen/img3.jpg"
+    }
+
+  ],
   "capitulos": [
     {
         "id": 1,

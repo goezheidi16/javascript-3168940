@@ -8,3 +8,15 @@ info_comic.innerHTML = `
     <P>${comic.sinopsis}</P>
     <p>${comic.genero}</p>
     `
+const card_personajes = document.querySelector(".card-personajes")
+console.log(comic.personajes) 
+
+comic.personajes.forEach( char => {
+    //crear elementos dinamicos con JavaScript
+    const div = document.createElement("div")
+    div.classList.add("personaje")
+
+
+    console.log(char.nombre)
+    document.body.innerHTML += `<img src="${char.imagen}" width="200">`
+});
