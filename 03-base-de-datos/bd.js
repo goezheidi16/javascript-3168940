@@ -9,41 +9,41 @@ let comic = {
 
   "personajes":[
     {
-      "nombre":"Andrea Echeverri actual",
-      "descripción":"hgusfgfdgdjgfdguetfdgubdbgfghghghhgghhgghhghfhghghggbgfvbgbgvbhfdhbjdvxn",
-      "imagen":"./imagen/img1.jpg"
+      "nombre":"Andrea Echeverri joven",
+      "descripción":"hgusfgfdgdjgfdguetfdgubdbgfghghghhgghhgghhghfhghghggbgfvbgbgvbhfdhbjdratatata",
+      "imagen":"./imagen/perso1.jpg"
     },
     {
       "nombre":"Andrea Echeverri joven",
       "descripción":"hgusfgfdgdjgfdguetfdgubdbgfghghghhgghhgghhghfhghghggbgfvbgbgvbhfdhbjdvxn",
-      "imagen":"./imagen/img2.jpg"
+      "imagen":"./imagen/perso2.jpg"
     },
     {
       "nombre":"Emoción",
       "descripción":"hgusfgfdgdjgfdguetfdgubdbgfghghghhgghhgghhghfhghghggbgfvbgbgvbhfdhbjdvxn",
-      "imagen":"./imagen/img3.jpg"
+      "imagen":"./imagen/perso3.jpg"
     }
 
   ],
   "capitulos": [
     {
-        "id": 1,
-      "nombre": "Capítulo 1",
+     "id": 1,
+     "nombre": "Capítulo 1",
      "personajes": ["..", "...", "...."],
      "portada": "",
      "descripcion": "..."
     },
     {
-   "id": 2,
-      "nombre": "Capítulo 2",
+     "id": 2,
+     "nombre": "Capítulo 2",
      "personajes": ["..", "...", "...."],
      "portada": "",
      "descripcion": "..."
       
     },
     {
-      "id": 3,
-      "nombre": "Capítulo 3",
+     "id": 3,
+     "nombre": "Capítulo 3",
      "personajes": ["..", "...", "...."],
      "portada": "",
      "descripcion": "..."
