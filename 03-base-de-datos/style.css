@@ -5,6 +5,12 @@
     border: 0;
 }
 
+small{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    font-size: 1.7rem;
+}
+
 .padre{
     background-image: url(imagen/netflix.png);
     height: 100vh;  /* Ocupa toda la pantalla */
@@ -13,7 +19,6 @@
     background-repeat: no-repeat;  /* Evita que se repita */
     overflow: hidden;
     overflow: scroll;
-
     display: flex;
     flex-direction: column;
     align-items: center;

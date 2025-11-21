@@ -1,8 +1,8 @@
 let comic = {
-  "nombreComic": "RUISEÑOERA",
+  "nombreComic": "RUISEÑORA",
   "numeroCapitulos": "3",
   "genero": "Fantasia",
-  "sinopsis": "Andrea vive en Bogotá creando su propio camino que pronto se torna dificil cuando la casa de sus padres se incendia y descubre que no fue un accidente cuando una criatura extraña se va en su contra y ella no sabe cuales son sus razones o quién es él, no tardará mucho para descubrir cuál es la realidad de lo que está viviendo y el poder que ella tiene..",
+  "sinopsis": "Andrea vive en Bogotá creando su propio camino que pronto se torna dificil cuando la casa de sus padres se incendia y descubre que no fue un accidente cuando una criatura extraña se va en su contra y ella no sabe cuales son sus razones o quién es él, no tardará mucho para descubrir cuál es la realidad de lo que está viviendo y el poder que ella tiene...",
   "autores": ["Maria Isabel", "Heidi"],
   "portadaComic": "",
   "year": 2025,
@@ -16,27 +16,27 @@ let comic = {
     {
       "nombre":"Andrea actual",
       "descripción":"50 años, es mamá, alegre, personalidad alegra y diferenciada, ojos cafe oscuro, cabello castaño medio con canas, estatura promedio, conflexión delgada, solista, tiene un estilo único, cabello encima de los hombros",
-      "imagen":"./imagen/perso2.jpg"
-    },
-    {
-      "nombre":"Emoción",
-      "descripción":"Alto, oscuro, cuerpo de barro, frustrado y enojado",
-      "imagen":"./imagen/perso3.jpg"
+      "imagen":"./imagen/perso1.jpg"
     },
     {
       "nombre":"Amparo de Echeveri",
       "descripción":"hdhddfjgdgdhfjgfsdnjhdfyjggff",
-      "imagen":"./imagen/perso1.jpg"
+      "imagen":"./imagen/perso2.jpg"
     },
     {
       "nombre":"Enrrique Echeverri",
       "descripción":"gdhfjgkhgjhgdthfyjgukhilkgjfhngfgdtfy",
-      "imagen":"./imagen/perso2.jpg"
+      "imagen":"./imagen/perso3.jpg"
     },
     {
-      "nombre":"Hector Buitrago",
+      "nombre":"Héctor Buitrago",
       "descripción":"Altura promedio, conflexión delgada, cabello castaño oscuro, trigueño, punketo",
-      "imagen":"./imagen/perso3.jpg"
+      "imagen":"./imagen/perso4.jpg"
+    },
+    {
+      "nombre":"Emoción",
+      "descripción":"Alto, oscuro, cuerpo de barro, frustrado y enojado",
+      "imagen":"./imagen/perso5.jpg"
     }
 
   ],
