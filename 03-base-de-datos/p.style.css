@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    border: 0;
+}
+
+h3{
+    padding: 8%;
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+    opacity: 40%;
+    margin: 40px;
+}
+
+#personajes{
+    background-image: url(imagen/netflix.png);
+    height: 100vh;  /* Ocupa toda la pantalla */
+    background-size: cover;  /* Para que cubra todo el espacio */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que se repita */
+    overflow: hidden;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
