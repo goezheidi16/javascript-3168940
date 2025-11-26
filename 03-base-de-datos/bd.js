@@ -9,31 +9,37 @@ let comic = {
 
   "personajes":[
     {
+      "id": 1,
       "nombre":"Andrea joven",
       "descripción":"25 años, personalidad alegre y diferenciada, ojos cafe oscuro, cabello castaño medio, estatura promedio, conflexión delgada, toca la guitarra, tiene un estilo único, estudiante de bellas artes, cabello hasta mitad de espalda",
       "imagen":"./imagen/perso1.jpg"
     },
     {
+      "id": 2,
       "nombre":"Andrea actual",
       "descripción":"50 años, es mamá, alegre, personalidad alegra y diferenciada, ojos cafe oscuro, cabello castaño medio con canas, estatura promedio, conflexión delgada, solista, tiene un estilo único, cabello encima de los hombros",
       "imagen":"./imagen/perso1.jpg"
     },
     {
+      "id": 3,
       "nombre":"Amparo de Echeveri",
       "descripción":"hdhddfjgdgdhfjgfsdnjhdfyjggff",
       "imagen":"./imagen/perso2.jpg"
     },
     {
+      "id": 4,
       "nombre":"Enrrique Echeverri",
       "descripción":"gdhfjgkhgjhgdthfyjgukhilkgjfhngfgdtfy",
       "imagen":"./imagen/perso3.jpg"
     },
     {
+      "id": 5,
       "nombre":"Héctor Buitrago",
       "descripción":"Altura promedio, conflexión delgada, cabello castaño oscuro, trigueño, punketo",
       "imagen":"./imagen/perso4.jpg"
     },
     {
+      "id": 6,
       "nombre":"Emoción",
       "descripción":"Alto, oscuro, cuerpo de barro, frustrado y enojado",
       "imagen":"./imagen/perso5.jpg"

@@ -1,3 +1,5 @@
+import {comic} from "./bd.js";
+
 const info_comic = document.querySelector(".info_comic")
 
 console.log(info_comic) 
@@ -13,3 +15,5 @@ const card_personajes = document.querySelector(".card-personajes")
 comic.personajes.forEach((char)=>{
     
 })
+
+<a href="./?id=${char,id}">
