@@ -15,5 +15,5 @@ const card_personajes = document.querySelector(".card-personajes")
 comic.personajes.forEach((char)=>{
     
 })
-
-<a href="./?id=${char,id}">
+/* 
+<a href="./?id=${char.id}"> */
