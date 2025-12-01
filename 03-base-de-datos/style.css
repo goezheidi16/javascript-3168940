@@ -152,6 +152,12 @@ h2{
     width: 100%;
 }
 
+@media screen and (max-widt: 570px) {
+    .sinopsis{
+        
+    }
+}
+
 @media screen and (max-width: 570px) {
     .sinopsis{
         width: 90%;

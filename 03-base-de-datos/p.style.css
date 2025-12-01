@@ -5,6 +5,7 @@
     border: 0;
 }
 
+
 h3{
     padding: 8%;
     font-size: 40px;
@@ -15,7 +16,7 @@ h3{
 }
 
 #personajes{
-    background-image: url(imagen/netflix.png);
+    background-image: url(imagen2/fondo2.png);
     height: 100vh;  /* Ocupa toda la pantalla */
     background-size: cover;  /* Para que cubra todo el espacio */
     background-position: center;  /* Centra la imagen */
