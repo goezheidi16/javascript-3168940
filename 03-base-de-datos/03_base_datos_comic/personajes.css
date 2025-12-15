@@ -1,0 +1,214 @@
+/* Fondo */
+*{
+  color: rgb(58, 152, 235);
+}
+.personajes-page {
+  background: radial-gradient(circle at top, #0e2136, #273647);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Centrado general */
+.cards_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* CARD hero */
+.card {
+  width: 520px;
+  padding: 28px;
+  border-radius: 28px;
+  position: relative;
+
+  /* Fondo glass */
+  background: rgba(190, 128, 128, 0.05);
+  backdrop-filter: blur(14px);
+
+  /* Borde iluminado */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05), 0 15px 40px rgba(0, 0, 0, 0.7);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover épico */
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.08), 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+
+/* Imagen con forma especial */
+.card-img {
+  width: 100%;
+  height: 300px;
+
+  border-radius: 22px;
+  mask-image: linear-gradient(to bottom right, black 80%, transparent 100%);
+  margin-bottom: 20px;
+
+  /* Sombra suave */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Título */
+.card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Descripción */
+.card-desc {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Subtexto */
+.card-subtext {
+  font-size: 0.95rem;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.card-img {
+  width: 200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cuervo img {
+  width: 350px;
+}
+
+.elkin img {
+  width: 200px;
+}
+.card {
+  position: relative; /* necesario para posicionar el botón dentro */
+}
+
+.salir-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.salir-btn:hover {
+  background: #ff4d5a;
+  transform: scale(1.1);
+}
+
+.salir-btn:active {
+  transform: scale(0.95);
+}
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons button {
+  padding: 10px 15px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nav-buttons button:hover {
+  background: #444;
+}
+
+/* Botón siempre encima */
+.card-img {
+  position: relative;
+  z-index: 1;
+}
+
+.salir-btn {
+  z-index: 20; /* Siempre por encima */
+}
+
+/* MEDIA QUERIES - Respeta tus tamaños fijos */
+@media (max-width: 640px) {
+  .card {
+    width: 420px;
+    max-width: 90vw;
+    padding: 24px;
+    border-radius: 24px;
+  }
+  
+  /* Respeta tamaños originales */
+  .card-img { height: 260px; }
+  .cuervo img { width: 300px; }
+  .elkin img { width: 180px; }
+  
+  .card-title { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 360px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .card-img { height: 220px; }
+  .cuervo img { width: 260px; }
+  .elkin img { width: 160px; }
+  
+  .card-title { font-size: 1.6rem; }
+}
+
+@media (max-width: 380px) {
+  .card { width: 320px; }
+  .cuervo img { width: 230px; }
+  .elkin img { width: 140px; }
+}
+/* Animación de entrada suave */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card {
+  animation: cardFadeIn 0.9s ease-out forwards;
+}
